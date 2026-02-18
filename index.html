@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM Professional Services LLC | Licensed Contractor in Chesapeake, VA</title>
+    <meta name="description" content="Licensed contractor serving Chesapeake, VA. Home repairs, renovations, and smart home installs. View our latest projects on Facebook.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CSS VARIABLES --- */
+        :root {
+            --primary-blue: #1E88E5;
+            --accent-orange: #FF6B35;
+            --dark-gray: #2C2C2C;
+            --light-gray: #F5F5F5;
+            --white: #FFFFFF;
+            --facebook-blue: #1877F2;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
+            --box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        /* --- RESET & BASE STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--dark-gray);
+            line-height: 1.6;
+            background-color: var(--white);
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- BUTTONS --- */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-orange);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #e55a2b;
+            transform: translateY(-2px);
+        }
+
+        .btn-facebook {
+            background-color: var(--facebook-blue);
+            color: var(--white);
+        }
+
+        .btn-facebook:hover {
+            background-color: #1465d3;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--white);
+            color: var(--primary-blue);
+        }
+
+        /* --- HEADER & NAVIGATION --- */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--box-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Custom Text-Based Logo */
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .logo-icon-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            margin-bottom: -5px;
+        }
+
+        .logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            letter-spacing: 1px;
+        }
+
+        .logo-banner {
+            background-color: var(--accent-orange);
+            color: var(--white);
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 2px 10px;
+            margin-top: 2px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav a {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+
+        nav a:hover {
+            color: var(--primary-blue);
+        }
+
+        .nav-phone {
+            color: var(--primary-blue);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* --- HERO SECTION --- */
+        #hero {
+            background: linear-gradient(rgba(30, 136, 229, 0.85), rgba(44, 44, 44, 0.85)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        #hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-weight: 400;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        /* --- INFO BANNER --- */
+        .info-banner {
+            background-color: var(--accent-orange);
+            color: var(--white);
+            text-align: center;
+            padding: 15px 0;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .info-banner i {
+            margin-right: 10px;
+        }
+
+        /* --- SERVICES SECTION --- */
+        #services {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            color: var(--primary-blue);
+            font-size: 2.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px 20px;
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-bottom: 4px solid var(--accent-orange);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            color: var(--dark-gray);
+        }
+
+        /* --- PROJECTS SECTION (Facebook Feed) --- */
+        #projects {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        
+        .widget-placeholder {
+            background-color: var(--light-gray);
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            padding: 60px 20px;
+            text-align: center;
+            color: #666;
+            margin-top: 30px;
+        }
+
+        /* --- ABOUT SECTION --- */
+        #about {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+
+        .about-content {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .credentials-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .credential-badge {
+            background-color: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid var(--primary-blue);
+            box-shadow: var(--box-shadow);
+        }
+
+        .credential-badge i {
+            color: var(--accent-orange);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        /* --- CONTACT SECTION --- */
+        #contact {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .contact-container {
+            display: flex;
+            gap: 50px;
+        }
+
+        .contact-form {
+            flex: 1;
+            background: var(--light-gray);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: var(--font-body);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .info-item i {
+            font-size: 1.5rem;
+            color: var(--accent-orange);
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+
+        .info-item h4 {
+            margin-bottom: 5px;
+            color: var(--primary-blue);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 20px;
+        }
+
+        .footer-content h3 {
+            color: var(--primary-blue);
+        }
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 900px) {
+            .about-content,
+            .contact-container {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            #hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .credentials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo-container">
+                <div class="logo-icon-row">
+                    <i class="fas fa-hammer"></i>
+                    <i class="fas fa-home"></i>
+                    <i class="fas fa-ruler-combined"></i>
+                </div>
+                <div class="logo-text">P.M PROFESSIONAL SERVICES</div>
+                <div class="logo-banner">Home Repairs and Improvement</div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <a href="tel:9482353398" class="nav-phone">
+                            <i class="fas fa-phone-alt"></i> (948) 235-3398
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="info-banner">
+        <div class="container">
+            <i class="fas fa-hard-hat"></i> Licensed Contractor Serving Chesapeake, VA & Surrounding Areas | Call Today: (948) 235-3398
+        </div>
+    </div>
+
+    <section id="hero">
+        <div class="container">
+            <h1>Quality Home Repairs & Renovations</h1>
+            <p>From minor repairs to complete room renovations, PM Professional Services LLC delivers quality workmanship, reliability, and fair pricing to homeowners in Chesapeake, Virginia.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Get Free Estimate</a>
+                <a href="tel:9482353398" class="btn btn-secondary">Call Now: (948) 235-3398</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive home improvement solutions tailored to your needs.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card"><i class="fas fa-tools"></i><h3>Home Repairs & Improvements</h3></div>
+                <div class="service-card"><i class="fas fa-border-all"></i><h3>Framing & Drywall</h3></div>
+                <div class="service-card"><i class="fas fa-door-open"></i><h3>Door Adjusted & Hung</h3></div>
+                <div class="service-card"><i class="fas fa-blender"></i><h3>Appliance Repair</h3></div>
+                <div class="service-card"><i class="fas fa-wrench"></i><h3>Handyman Work</h3></div>
+                <div class="service-card"><i class="fas fa-faucet"></i><h3>Minor Plumbing & Electrical</h3></div>
+                <div class="service-card"><i class="fas fa-paint-roller"></i><h3>Drywall Repairs & Painting</h3></div>
+                <div class="service-card"><i class="fas fa-bath"></i><h3>Kitchen & Bath Remodeling</h3></div>
+                <div class="service-card"><i class="fas fa-couch"></i><h3>Room Renovations</h3></div>
+                <div class="service-card"><i class="fas fa-layer-group"></i><h3>Decks And Sheds</h3></div>
+                <div class="service-card"><i class="fas fa-tshirt"></i><h3>Custom Closets & Shelves</h3></div>
+                <div class="service-card"><i class="fas fa-warehouse"></i><h3>Renovated Garages & Storage</h3></div>
+                <div class="service-card"><i class="fas fa-wifi"></i><h3>Smart Home Installs</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recent Projects</h2>
+                <p>See our latest work in Chesapeake, updated directly from our Facebook page.</p>
+                <div style="margin-top: 20px;">
+                    <a href="https://www.facebook.com/profile.php?id=61578858336788" target="_blank" class="btn btn-facebook">
+                        <i class="fab fa-facebook"></i> Follow on Facebook
+                    </a>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: center; margin-top: 40px;">
+                <iframe 
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61578858336788&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                    width="500" 
+                    height="600" 
+                    style="border:none;overflow:hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 8px;" 
+                    scrolling="no" 
+                    frameborder="0" 
+                    allowfullscreen="true" 
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                </iframe>
+            </div>
+
+            <p style="text-align: center; margin-top: 20px; font-size: 0.9rem; color: #666;">
+                <em>(Feed not loading? Ensure your browser isn't blocking social media trackers, or click the blue button above.)</em>
+            </p>
+
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 style="color: var(--primary-blue);">Why Choose Us?</h2>
+                    <p>At <strong>PM Professional Services LLC</strong>, owner Paul Mefford and the team are dedicated to making your house feel more like home. We understand that inviting a contractor into your living space requires trust.</p>
+                    <p>That's why we operate on three core principles: <strong>Quality work, fair pricing, and absolute reliability</strong>. Whether you need a simple door adjustment, a smart home security installation, or a full kitchen remodel, we bring the same level of professional dedication to every job.</p>
+                    <p>We are proud to be a locally owned, licensed contractor serving our neighbors right here in Chesapeake, VA.</p>
+                </div>
+                <div class="credentials-grid">
+                    <div class="credential-badge">
+                        <i class="fas fa-certificate"></i>
+                        <h4>Licensed Contractor</h4>
+                        <p>Fully certified and professional</p>
+                    </div>
+                    <div class="credential-badge">
+                        <i class="fas fa-star"></i>
+                        <h4>Quality Work</h4>
+                        <p>Expert craftsmanship guaranteed</p>
+                    </div>
+                    <div class="credential-badge">
+                        <i class="fas fa-handshake"></i>
+                        <h4>Fair Pricing</h4>
+                        <p>Honest quotes, no hidden fees</p>
+                    </div>
+                    <div class="credential-badge">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Local Experts</h4>
+                        <p>Proudly serving Chesapeake, VA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Request Your Free Estimate</h2>
+                <p>Ready to start your next project? Reach out to us today.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="you@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <input type="text" id="service" name="service" placeholder="e.g., Kitchen Remodel, Handyman Work">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" name="message" required placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p><a href="tel:9482353398">(948) 235-3398</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p><a href="mailto:pmpsrvcs@gmail.com">pmpsrvcs@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>654 Prosperity Way<br>Chesapeake, VA 23320</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: By Appointment<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                    <div class="info-item" style="margin-top: 40px;">
+                        <div>
+                            <h4 style="color: var(--dark-gray); font-size: 1.2rem;">"Quality work at fair prices"</h4>
+                            <p>— Paul Mefford, Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>PM Professional Services LLC</h3>
+                <p>Licensed Contractor | Chesapeake, VA</p>
+            </div>
+            <p>&copy; 2026 PM Professional Services LLC. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
