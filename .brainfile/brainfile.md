@@ -7,11 +7,6 @@ agent:
     - Completed tasks are in logs/
     - Preserve all IDs
     - Make minimal changes
-    - Client project — Paul Mefford, owner of PM Professional Services LLC
-    - Licensed contractor in Chesapeake, VA (SDVOSB)
-    - Domain pmprofessionalservices.com owned via Porkbun (order 7448686)
-    - Hosted on Cloudflare Workers (pm-professional-svc-website)
-    - CI/CD via GitHub Actions → Cloudflare Workers auto-deploy on push to main
 columns:
   - id: todo
     title: To Do
@@ -19,6 +14,16 @@ columns:
     title: In Progress
   - id: done
     title: Done
+rules:
+  always:
+    - id: 1
+      rule: Client project — follow PM Professional Services branding, not Cisco or Grayskull
+  never:
+    - id: 1
+      rule: Include Cisco or Grayskull branding in client deliverables
+  context:
+    - id: 1
+      rule: "Client project, PUBLIC classification. Default assignee: claude. Infra: cloudflare"
 ---
 
 # PM Professional Services LLC Website
