@@ -49,7 +49,27 @@ subtasks:
     title: Accessibility audit (alt text, ARIA labels, contrast)
     completed: false
 createdAt: "2026-02-20T21:39:15.501Z"
-updatedAt: "2026-02-20T22:08:36.075Z"
+updatedAt: "2026-03-10T13:42:55.149Z"
+contract:
+  status: ready
+  deliverables:
+    - type: docs
+      path: deliverables/seo-audit-report.md
+      description: SEO and web best practices audit with prioritized findings
+    - type: file
+      path: src/index.html
+      description: Updated HTML with structured data, meta tags, canonical URLs, alt text
+  validation:
+    commands:
+      - grep -q 'application/ld+json' src/index.html
+      - grep -q 'meta name="description"' src/index.html
+      - test -f deliverables/seo-audit-report.md
+  constraints:
+    - Focus on local SEO for Chesapeake, VA market
+    - Include LocalBusiness structured data (schema.org)
+    - All images must have descriptive alt text
+    - Add favicon and Apple touch icons
+    - "Security headers: X-Content-Type-Options, X-Frame-Options, Referrer-Policy"
 ---
 
 ## Description

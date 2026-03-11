@@ -10,9 +10,6 @@ tags:
   - social-media
   - branding
 subtasks:
-  - id: task-8-1
-    title: Set up Google Business Profile with photos, services, hours, and service area
-    completed: false
   - id: task-8-2
     title: Create Nextdoor business page (key platform for local contractors)
     completed: false
@@ -38,6 +35,7 @@ subtasks:
     title: Set up Facebook Business page properly (vs personal profile) if not already done
     completed: false
 createdAt: "2026-02-20T21:39:16.010Z"
+updatedAt: "2026-03-10T13:41:34.500Z"
 ---
 
 ## Description

@@ -23,6 +23,25 @@ subtasks:
     title: "Test end-to-end: form submit → email arrives at pmpsrvcs@gmail.com"
     completed: false
 createdAt: "2026-02-20T21:35:22.297Z"
+contract:
+  status: ready
+  deliverables:
+    - type: file
+      path: src/contact-handler.js
+      description: Cloudflare Worker handler for contact form submissions
+    - type: file
+      path: wrangler.toml
+      description: Worker config with email routing bindings
+  validation:
+    commands:
+      - npx wrangler deploy --dry-run
+      - test -f src/contact-handler.js
+  constraints:
+    - Must send to Paul's email address
+    - Use pmprofessionalservices.com domain as sender
+    - Include spam protection (honeypot field or rate limiting)
+    - Form validation server-side — never trust client input
+updatedAt: "2026-03-10T13:42:55.123Z"
 ---
 
 ## Description

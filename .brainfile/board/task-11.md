@@ -25,6 +25,30 @@ subtasks:
     title: Add footer links to both documents
     completed: false
 createdAt: "2026-02-20T22:08:51.053Z"
+contract:
+  status: ready
+  deliverables:
+    - type: file
+      path: src/privacy-policy.html
+      description: Privacy policy page covering VCDPA requirements
+    - type: file
+      path: src/terms-of-service.html
+      description: Terms of service page
+    - type: file
+      path: src/index.html
+      description: Updated footer with links to privacy policy and terms of service
+  validation:
+    commands:
+      - test -f src/privacy-policy.html
+      - test -f src/terms-of-service.html
+      - grep -qi 'privacy-policy' src/index.html
+  constraints:
+    - Must address Virginia VCDPA requirements for PII collection
+    - Disclose all data collected via contact form (name, email, phone, message)
+    - Include cookie policy section even if no cookies currently used
+    - Provide contact method for data access/deletion requests
+    - Use plain language — not impenetrable legalese
+updatedAt: "2026-03-10T13:42:55.159Z"
 ---
 
 ## Description

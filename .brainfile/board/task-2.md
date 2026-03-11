@@ -20,6 +20,25 @@ subtasks:
     title: Add SDVOSB badge/icon to footer
     completed: false
 createdAt: "2026-02-20T21:35:22.520Z"
+contract:
+  status: ready
+  deliverables:
+    - type: file
+      path: src/index.html
+      description: Updated HTML with SDVOSB badge in About section credentials grid and footer
+    - type: file
+      path: assets/sdvosb-badge.svg
+      description: SDVOSB designation badge/icon
+  validation:
+    commands:
+      - grep -qi 'sdvosb' src/index.html
+      - test -f assets/sdvosb-badge.svg
+  constraints:
+    - SDVOSB badge must be visually prominent but not garish
+    - Include in About section credentials grid AND footer
+    - Use official SDVOSB designation language
+    - Responsive — badge must render properly on mobile
+updatedAt: "2026-03-10T13:42:55.134Z"
 ---
 
 ## Description
